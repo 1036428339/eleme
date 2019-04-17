@@ -9,6 +9,29 @@ bg-image($url)
     margin 0
     padding 0
     box-sizing border-box
+
+// 自定义字体
+@font-face
+    font-family 'sell-icon'
+    src: url('./fonts/sell-icon.eot?k5xf13');
+    // src: url('./fonts/sell-icon.eot?k5xf13#iefix') 
+    // format('embedded-opentype'),
+    // src: url('./fonts/sell-icon.ttf?k5xf13') 
+    // format('truetype'),
+    // src: url('./fonts/sell-icon.woff?k5xf13') 
+    // format('woff'),
+    // src: url('./fonts/sell-icon.svg?k5xf13#sell-icon') 
+    // format('svg');
+
+[class^="icon-"], [class*=" icon-"]
+    font-family 'sell-icon' !important
+    font-style normal
+    font-weight normal
+    line-height 1
+
+.icon-keyboard_arrow_right:before
+    content: "\e909"
+
 .header
     position relative
     overflow hidden
@@ -41,3 +64,41 @@ bg-image($url)
                     font-size 16px
                     line-height 18px
                     font-weight bold
+            .support
+                .icon
+                    display inline-block
+                    vertical-align top
+                    width 12px
+                    height 12px
+                    margin-right 4px
+                    background-size 12px 12px
+                    background-repeat no-repeat
+                    &.decrease
+                        bg-image('decrease_1')
+                    &.discount
+                        bg-image('discount_1')
+                    &.guarantee
+                        bg-image('guarantee_1')
+                    &.invoice
+                        bg-image('invoice_1')
+                    &.special
+                        bg-image('special_1')
+                .text
+                    line-height 12
+                    font-size 10px
+        .support-count
+            position absolute
+            right 12px
+            bottom 14px
+            padding 0 8px
+            height 24px
+            border-radius 14px
+            background rgba(0,0,0,0.2)
+            text-align center
+            .count
+                vertical-align top
+                font-size 10px
+            .icon-keyboard_arrow_right
+                margin-left 2px
+                line-height 24px
+                font-size 10px
